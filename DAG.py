@@ -37,6 +37,7 @@ def getParents(node, graph):
     return res
 
 def genGraph(n, p):
+    #n is the number of nodes, p is the probability of a given edge actually existing
     graph = []
     for i in range(n):
         graph.append(node(i))
@@ -65,6 +66,7 @@ def findCor(graph):
     return res
 
 def experiment(n, p):
+    #n is the number of nodes, p is the probability of a given edge actually existing
     g = genGraph(n, p)
     return (float(len(findCausal(g))) / float(len(findCor(g))))
 
